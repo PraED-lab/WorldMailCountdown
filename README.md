@@ -21,9 +21,9 @@
 - 🌍 **16 languages**: time units and day letter follow your language (D, J, T, d…).
 - 🪶 **Lightweight**: one small DLL, no game files changed on disk.
 
-## 🔔 Add-on: World Mail Alerts 2.0
+## 🔔 Pair it with World Mail Alerts 2.0
 Want a **sound and a notification** before a mail expires, your **flea market sales with price**, a **history window** and a **daily money graph**?
-➡️ **[World Mail Alerts](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** ([GitHub](https://github.com/PraED-lab/WorldMailAlerts)), built on top of World Mail Countdown.
+➡️ **[World Mail Alerts](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** ([GitHub](https://github.com/PraED-lab/WorldMailAlerts)). Each mod works on its own, and they work great together.
 
 ## 🌍 Languages
 Français, English, Deutsch, Español, Português, Italiano, Polski, Русский, Čeština, Slovenčina, Türkçe, Magyar, Română, 中文, 日本語, 한국어. **Auto** follows the game language.
@@ -64,4 +64,4 @@ Without ConfigurationManager, edit `BepInEx/config/praedlab.mailcountdown.cfg` (
 
 ## 🇫🇷 En français
 **World Mail Countdown** ajoute un **compte à rebours en couleur** sur chaque courrier avec objets, pour ne plus jamais perdre un colis. 8 paliers de couleurs, 20 thèmes, 8 styles d'affichage, date d'expiration à ton heure locale, 16 langues, tout se règle dans **F12**.
-Add-on : **[World Mail Alerts 2.0](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** pour les alertes sonores, les ventes au marché, l'historique et le graphique de la journée.
+À associer avec **[World Mail Alerts 2.0](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** pour les alertes sonores, les ventes au marché, l'historique et le graphique de la journée. Chaque mod fonctionne seul, et les deux se complètent.
