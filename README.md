@@ -1,89 +1,67 @@
-# ⏳ MailCountdown 1.1.1 – Mail countdown for Tarkov / SPT
+# ⏳ World Mail Countdown 1.2.0
 
-![version](https://img.shields.io/badge/version-1.1.1-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+**Never lose your gear in the mail again.** A BepInEx plugin for SPT 4.1.x that adds a **live, color-coded countdown** to every mail with items: refunds, insurance returns, quest rewards, trader packages, flea market payments… Fully configurable in F12, 16 languages.
 
-## 📖 Overview
-In Escape from Tarkov, mail attachments (refunds, quest rewards, trader packages…) **expire after a set time**, but the game only shows an approximate duration. **MailCountdown** adds a **precise, to-the-second countdown** right on the message, so you never lose a package again.
+![version](https://img.shields.io/badge/version-1.2.0-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+
+![Countdown in the messenger](screenshots/messenger.png)
 
 ## ✨ Features
-- ⏱️ **Live countdown** shown next to any message with attachments.
-- 📅 **Days + time** while more than 24 h remain: `(3D 23:35:46)`.
-- 🕛 **Hours/minutes/seconds only** under 24 h: `(23:35:46)`.
-- 🌍 **Follows the game language**: `D` for days in English, `J` in French.
-- 🪶 **Lightweight**: a single small DLL, no config file, no game files modified on disk.
+- ⏱️ **Live countdown** next to every message with attachments, colored by time left.
+
+  ![Countdown](screenshots/countdown.png)
+
+- 🎨 **8 color tiers**: for each one, the time left it starts at, any color, rainbow and/or blinking.
+  Default: > 1 week cyan, > 3 days green, > 1 day lime, > 6 h yellow, > 1 h orange, > 10 min red, > 1 min blinking magenta, last minute rainbow.
+- 🌈 **20 color themes** (Traffic light, Neon, Fire, Ocean, Matrix, Cyberpunk, Gold…), smooth gradient between tiers, rainbow per letter or per word.
+- 🔤 **8 display styles**: `3D 23:35:46`, `3D 23h 35m 46s`, `3D 23h`, `~3D`, `3 days 23 h 35 min`, `95:35:46`, `95h 35m`, `3.9D`.
+- 📅 **Expiry date in your local time** (optional): `2D 23h | 17/11 12:34`.
+- 🔣 **88 bracket styles** `( )` `[ ]` `« »` `•`… or your own text.
+- ✂️ **Max length**: long text is shortened step by step so it never goes under the RECEIVE button.
+- 🌍 **16 languages**: time units and day letter follow your language (D, J, T, d…).
+- 🪶 **Lightweight**: one small DLL, no game files changed on disk.
+
+## 🔔 Add-on: World Mail Alerts 2.0
+Want a **sound and a notification** before a mail expires, your **flea market sales with price**, a **history window** and a **daily money graph**?
+➡️ **[World Mail Alerts](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** ([GitHub](https://github.com/PraED-lab/WorldMailAlerts)), built on top of World Mail Countdown.
+
+## 🌍 Languages
+Français, English, Deutsch, Español, Português, Italiano, Polski, Русский, Čeština, Slovenčina, Türkçe, Magyar, Română, 中文, 日本語, 한국어. **Auto** follows the game language.
 
 ## 📥 Installation
 1. Close the game.
-2. Download `MailCountdown_v1.1.1.zip` from the **Releases** section.
-3. Copy `BepInEx/plugins/MailCountdown.dll` into your SPT `BepInEx/plugins` folder.
-4. Start the game. `BepInEx/LogOutput.log` should show a line starting with *MailCountdown v1.1.1*.
+2. Download `WorldMailCountdown` from the **Releases** section or from the [Forge](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations).
+3. Copy `BepInEx/plugins/WorldMailCountdown.dll` into your SPT `BepInEx/plugins` folder.
 
-**Update:** replace the old DLL (never keep two versions at the same time).
-**Uninstall:** delete `MailCountdown.dll`.
+**Updating from MailCountdown 1.1.x:** delete the old `MailCountdown.dll` first. Never keep both.
+
+## ⚙️ Settings
+Press **F12** in game → **World Mail Countdown** (BepInEx ConfigurationManager).
+Without ConfigurationManager, edit `BepInEx/config/praedlab.mailcountdown.cfg` (created at first launch).
 
 ## ✅ Compatibility
-- **SPT 4.1.x** with BepInEx.
-- No other mod required.
+- **SPT 4.1.x** with BepInEx 5. No other mod required.
 - The mod changes how mail text is displayed, so it may conflict with another mod that edits the same text. Please report any conflict.
 
-## ⚠️ Known limitations
-- If a game update changes the mail UI, the countdown may stop showing. The BepInEx log then shows an init or postfix error line.
-- Tested on SPT 4.1.x only.
+## 🛠️ Troubleshooting
+- Text overlaps the RECEIVE button? Lower **Max length**.
+- Bug report: turn on **Debug layout log**, then open an **issue** with your `BepInEx/LogOutput.log`.
 
-## 🐛 Bug or suggestion?
-Open an **issue** and attach your `BepInEx/LogOutput.log`.
+## 📝 Changelog
+### 1.2.0
+- Renamed **World Mail Countdown**. F12 settings menu.
+- 8 color tiers with custom times, colors, rainbow and blinking. 20 themes, smooth gradient.
+- 16 languages with translated time units. 8 display styles, 88 bracket styles.
+- Optional expiry date in your local time. Automatic max length.
+
+### 1.1.1
+- Live countdown on mails with attachments, days + time, follows the game language (D / J).
 
 ## 👤 Author
-**PraED_TV** (PraED-lab) · Released under the MIT license.
-
-
-
-
----------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-# ⏳ MailCountdown 1.1.1 – Compte à rebours dans le courrier (Tarkov / SPT)
-
-## 📖 Présentation
-Dans Escape from Tarkov, les pièces jointes du courrier (remboursements, récompenses de quêtes, colis des marchands…) **expirent au bout d'un certain temps**, mais le jeu n'affiche qu'une durée approximative. **MailCountdown** ajoute un **compte à rebours précis, à la seconde**, directement sur le message, pour que tu ne perdes plus jamais un colis.
-
-## ✨ Fonctionnalités
-- ⏱️ **Compte à rebours en temps réel** affiché à côté du message qui contient des pièces jointes.
-- 📅 **Affichage jours + heures** tant qu'il reste plus de 24 h : `(3J 23:35:46)`.
-- 🕛 **Passage en heures/minutes/secondes** sous les 24 h : `(23:35:46)`.
-- 🌍 **Adapté à la langue du jeu** :
-  - Français : `J` pour jours
-  - Anglais : `D` pour days
-- 🪶 **Très léger** : une seule petite DLL, aucun fichier de configuration, aucune modification des fichiers du jeu sur le disque.
-
-## 📥 Installation
-1. Ferme le jeu.
-2. Télécharge `MailCountdown_v1.1.1.zip` dans la section **Releases**.
-3. Copie `BepInEx/plugins/MailCountdown.dll` dans le dossier `BepInEx/plugins` de ton SPT.
-4. Lance le jeu. Dans `BepInEx/LogOutput.log`, tu dois voir : *MailCountdown v1.1.1 charge*.
-
-**Mise à jour** : remplace simplement l'ancienne DLL (ne garde pas deux versions en même temps).
-**Désinstallation** : supprime `MailCountdown.dll`.
-
-## ✅ Compatibilité
-- **SPT 4.1.x** avec BepInEx.
-- Aucun autre mod nécessaire.
-- Le mod modifie l'affichage du courrier. Il peut entrer en conflit avec un autre mod qui change le même texte. Signale-le-moi si tu en rencontres un.
-
-## ⚠️ Limites connues
-- Si une mise à jour du jeu change l'interface du courrier, le compte à rebours peut ne plus s'afficher. Dans ce cas, le journal BepInEx indique « Echec init » ou « Erreur postfix ».
-- Mod testé uniquement sur SPT 4.1.x.
-
-## 🐛 Bug ou suggestion ?
-Ouvre une **issue** et joins ton `BepInEx/LogOutput.log`.
-
-## 👤 Auteur
-**PraED_TV** (PraED-lab)
+**PraED_TV** (PraED-lab) · Discord: **PraED_tv** · MIT license. Not affiliated with Battlestate Games.
 
 ---
 
-## 🇬🇧 English summary
-**MailCountdown** adds a live, to-the-second countdown to mail messages that have attachments in Tarkov / SPT. It shows `(3D 23:35:46)` with days, then switches to `(23:35:46)` under 24 hours. The label follows the game language (J in French, D in English). Install by copying `MailCountdown.dll` into `BepInEx/plugins` with the game closed. Built for SPT 4.1.x; no config file and no dependencies other than BepInEx.
+## 🇫🇷 En français
+**World Mail Countdown** ajoute un **compte à rebours en couleur** sur chaque courrier avec objets, pour ne plus jamais perdre un colis. 8 paliers de couleurs, 20 thèmes, 8 styles d'affichage, date d'expiration à ton heure locale, 16 langues, tout se règle dans **F12**.
+Add-on : **[World Mail Alerts 2.0](https://sp-mod.com/mod/3361/world-mail-alerts-history-money-graph-add-16-translations)** pour les alertes sonores, les ventes au marché, l'historique et le graphique de la journée.
